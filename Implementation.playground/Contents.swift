@@ -112,4 +112,23 @@ numbers
  */
 
 // Begin your implementation below...
+// Generate a series of number in the array
+numbers.insert(4, at: 0)
+numbers.insert(3, at: 1)
+numbers.insert(5, at: 2)
+numbers.insert(10, at: 3)
+numbers.insert(9, at: 4)
+numbers.insert(2, at: 5)
+numbers.insert(7, at: 6)
+numbers.insert(8, at: 7)
+// Loop and find the minimum value and the index of the minimum value
+let minimumValue = numbers [0] // Assume the value if
+var minimumIndex = 0
 
+for i in 0...numbers.count-1 {
+    if numbers[i] > numbers[i+1] {
+        let temporaryValue = numbers[i]
+        numbers[i] = numbers[i+1]
+        numbers[i+1] = temporaryValue
+    }
+}
